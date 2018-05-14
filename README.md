@@ -67,6 +67,11 @@ Easy to use Angular2 directives for files upload ([demo](http://valor-software.g
   5. `formatDataFunction` - Function to modify the request body. 'DisableMultipart' must be 'true' for this function to be called.
   6. `formatDataFunctionIsAsync` - Informs if the function sent in 'formatDataFunction' is asynchronous. Defaults to false.
   7. `parametersBeforeFiles` - States if additional parameters should be appended before or after the file. Defaults to false.
+  8. `chunkSize` - The Size of each chunk in Bytes, if this parameter is set the file chunk upload functionality will run. Defaults to Null.
+  9. `currentChunkParam` - Parameter Sent with the chunk request, the current chunk number of the file. Defaults to 'current_chunk'.
+  10. `totalChunkParam` - Parameter Sent with the chunk request, the total number of chunks of the file. Defaults to 'total_chunks'.
+  11. `chunkMethod` - After the first chunk, this method is set. Defaults to 'PUT' because is the standard for update.
+  
 
 ### Events
 
@@ -83,6 +88,67 @@ Please follow this guidelines when reporting bugs and feature requests:
 2. Please **always** write steps to reproduce the error. That way we can focus on fixing the bug, not scratching our heads trying to reproduce it.
 
 Thanks for understanding!
+
+## Using/Sending Chunk Files Feature
+  
+  If you want to send the files chunked you can just set the chunk paramets on the uploader object
+
+  If your chunk request changes the link after the first request you should use this code
+  ```typescript
+  this.uploader.onCompleteChunk = (item,response,status,headers)=>{
+        response = JSON.parse(response);
+        if(response['id']){
+            item.url = YOUR_NEW_URL+response['id']+'/';
+        }
+    }
+  ```
+
+### Code snippet on how to use the Chunk File Feature on your code
+  ```typescript
+    ...
+    import { FileUploader } from 'ng2-file-upload';
+    ...
+    export class SimpleDemoComponent {
+      ...
+      uploader:FileUploader;
+      ...
+      constructor () {
+        ...
+          this.uploader = new FileUploader({
+            url: URL,
+            disableMultipart : false,
+            isHTML5: true,
+            chunkSize: (1024*1024), // 2MB
+            currentChunkParam: 'current_chunk',
+            totalChunkParam: 'total_chunks',
+            chunkMethod: 'PUT',
+            //authToken = 'JWT '+TOKEN,
+          });
+          this.uploader.onBeforeUploadItem = (item) => {
+              // If you use credentials this might help you with the "Access-Control-Allow-Origin" error
+              item.withCredentials = false;
+          };
+          this.uploader.onCompleteChunk = (item, response, status, headers) => {
+            //Insert the Logic here to start uploading next chunks
+            // Example, setting the ID of the File uploaded and chaning the link for the next request
+            // In my Case the API is using a put method with the link containing the PK of the object
+            response = JSON.parse(response);
+            if (response['id']) {
+                item.setId(response['id']);
+                item.url = this.media_url + item.getId() + '/';
+            }
+          };
+          this.uploader.onErrorItem = (item, response, status, headers) => {
+             // Treat the error on the upload
+             // On the chunk method we try to upload a chunk for 10 times before triggering this error
+          };
+          this.uploader.onRemoveItem = (item) => {
+             // Treat the file removal from the server
+          };
+        ...
+      }
+  ```
+
 
 ### License
 
