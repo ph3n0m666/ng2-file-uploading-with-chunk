@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { TabsModule } from 'ngx-bootstrap/tabs';
-import { FileUploadModule } from 'ng2-namespaced-file-upload';
+import { FileUploadModule } from 'ng2-file-uploading-with-chunk';
 
 import { AppComponent } from './app.component';
 import { FileUploadSectionComponent } from './components/file-upload-section';

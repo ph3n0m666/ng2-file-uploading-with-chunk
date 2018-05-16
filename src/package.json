@@ -1,5 +1,5 @@
 {
-  "name": "ng2-namespaced-file-upload",
+  "name": "ng2-file-uploading-with-chunk",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "*",

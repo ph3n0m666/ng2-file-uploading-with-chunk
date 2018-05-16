@@ -1,5 +1,5 @@
 {
-  "name": "ng2-namespaced-file-upload",
+  "name": "ng2-file-uploading-with-chunk",
   "version": "0.0.1",
   "description": "Angular file upload directives",
   "scripts": {
@@ -21,7 +21,7 @@
     "test-coverage": "ng test -sr -cc",
     "version": "npm run flow.changelog && git add -A"
   },
-  "main": "bundles/ng2-namespaced-file-upload.umd.js",
+  "main": "bundles/ng2-file-uploading-with-chunk.umd.js",
   "module": "index.js",
   "typings": "index.d.ts",
   "keywords": [
@@ -36,12 +36,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ph3n0m666/ng2-namespaced-file-upload.git"
+    "url": "git+ssh://git@github.com/ph3n0m666/ng2-file-uploading-with-chunk.git"
   },
   "bugs": {
-    "url": "https://github.com/ph3n0m666/ng2-namespaced-file-upload/issues"
+    "url": "https://github.com/ph3n0m666/ng2-file-uploading-with-chunk/issues"
   },
-  "homepage": "https://github.com/ph3n0m666/ng2-namespaced-file-upload#readme",
+  "homepage": "https://github.com/ph3n0m666/ng2-file-uploading-with-chunk#readme",
   "dependencies": {},
   "peerDependencies": {
     "@angular/common": "^2.3.1 || >=4.0.0",

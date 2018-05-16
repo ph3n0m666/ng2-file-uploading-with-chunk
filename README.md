@@ -1,31 +1,31 @@
-# ng2-namespaced-file-upload [![npm version](https://badge.fury.io/js/ng2-namespaced-file-upload.svg)](http://badge.fury.io/js/ng2-namespaced-file-upload) [![npm downloads](https://img.shields.io/npm/dm/ng2-namespaced-file-upload.svg)](https://npmjs.org/ng2-namespaced-file-upload)[![slack](https://ngx-slack.herokuapp.com/badge.svg)](https://ngx-slack.herokuapp.com)
-Easy to use Angular2 directives for files upload ([demo](http://valor-software.github.io/ng2-namespaced-file-upload/))
+# ng2-file-uploading-with-chunk [![npm version](https://badge.fury.io/js/ng2-file-uploading-with-chunk.svg)](http://badge.fury.io/js/ng2-file-uploading-with-chunk) [![npm downloads](https://img.shields.io/npm/dm/ng2-file-uploading-with-chunk.svg)](https://npmjs.org/ng2-file-uploading-with-chunk)[![slack](https://ngx-slack.herokuapp.com/badge.svg)](https://ngx-slack.herokuapp.com)
+Easy to use Angular2 directives for files upload ([demo](http://valor-software.github.io/ng2-file-uploading-with-chunk/))
 
 [![Angular 2 Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://github.com/mgechev/angular2-style-guide)
-[![Build Status](https://travis-ci.org/valor-software/ng2-namespaced-file-upload.svg?branch=development)](https://travis-ci.org/valor-software/ng2-namespaced-file-upload)
-[![Dependency Status](https://david-dm.org/valor-software/ng2-namespaced-file-upload.svg)](https://david-dm.org/valor-software/ng2-namespaced-file-upload)
+[![Build Status](https://travis-ci.org/valor-software/ng2-file-uploading-with-chunk.svg?branch=development)](https://travis-ci.org/valor-software/ng2-file-uploading-with-chunk)
+[![Dependency Status](https://david-dm.org/valor-software/ng2-file-uploading-with-chunk.svg)](https://david-dm.org/valor-software/ng2-file-uploading-with-chunk)
 
 ## Quick start
 
-1. A recommended way to install ***ng2-namespaced-file-upload*** is through [npm](https://www.npmjs.com/search?q=ng2-namespaced-file-upload) package manager using the following command:
+1. A recommended way to install ***ng2-file-uploading-with-chunk*** is through [npm](https://www.npmjs.com/search?q=ng2-file-uploading-with-chunk) package manager using the following command:
 
-  `npm i ng2-namespaced-file-upload --save`
+  `npm i ng2-file-uploading-with-chunk --save`
 
-  Alternatively, you can [download it in a ZIP file](https://github.com/ph3n0m666/ng2-namespaced-file-upload/archive/master.zip).
+  Alternatively, you can [download it in a ZIP file](https://github.com/ph3n0m666/ng2-file-uploading-with-chunk/archive/master.zip).
 
-2. Currently `ng2-namespaced-file-upload` contains two directives: `ng2-file-select` and `ng2-file-drop`. `ng2-file-select` is used for 'file-input' field of form and
+2. Currently `ng2-file-uploading-with-chunk` contains two directives: `ng2-file-select` and `ng2-file-drop`. `ng2-file-select` is used for 'file-input' field of form and
   `ng2-file-drop` is used for area that will be used for dropping of file or files.
 
-3. More information regarding using of ***ng2-namespaced-file-upload*** is located in
-  [demo](http://valor-software.github.io/ng2-namespaced-file-upload/) and [demo sources](https://github.com/ph3n0m666/ng2-namespaced-file-upload/tree/master/demo).
+3. More information regarding using of ***ng2-file-uploading-with-chunk*** is located in
+  [demo](http://valor-software.github.io/ng2-file-uploading-with-chunk/) and [demo sources](https://github.com/ph3n0m666/ng2-file-uploading-with-chunk/tree/master/demo).
   
-## Using ***ng2-namespaced-file-upload*** in a project
+## Using ***ng2-file-uploading-with-chunk*** in a project
 
 1. Install as shown in the above section.
 
-2. Import `FileUploadModule` into the module that declares the component using ***ng2-namespaced-file-upload***:
+2. Import `FileUploadModule` into the module that declares the component using ***ng2-file-uploading-with-chunk***:
 
-```import { FileUploadModule } from 'ng2-namespaced-file-upload';```
+```import { FileUploadModule } from 'ng2-file-uploading-with-chunk';```
 
 3. Add it to `[imports]` under `@NgModule`:
 
@@ -33,7 +33,7 @@ Easy to use Angular2 directives for files upload ([demo](http://valor-software.g
 
 4. Import `FileUploader` into the component:
 
-```import {  FileUploader } from 'ng2-namespaced-file-upload';```
+```import {  FileUploader } from 'ng2-file-uploading-with-chunk';```
 
 5. Create a variable for the API url:
 
@@ -103,7 +103,7 @@ Thanks for understanding!
 ### Code snippet on how to use the Chunk File Feature on your code
   ```typescript
     ...
-    import { FileUploader } from 'ng2-namespaced-file-upload';
+    import { FileUploader } from 'ng2-file-uploading-with-chunk';
     ...
     export class SimpleDemoComponent {
       ...
@@ -149,4 +149,4 @@ Thanks for understanding!
 
 ### License
 
-The MIT License (see the [LICENSE](https://github.com/ph3n0m666/ng2-namespaced-file-upload/blob/master/LICENSE) file for the full text)
+The MIT License (see the [LICENSE](https://github.com/ph3n0m666/ng2-file-uploading-with-chunk/blob/master/LICENSE) file for the full text)

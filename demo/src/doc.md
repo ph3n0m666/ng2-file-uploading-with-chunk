@@ -1,6 +1,6 @@
 ### Usage
 ```typescript
-import { FileSelectDirective, FileDropDirective, FileUploader } from 'ng2-namespaced-file-upload/ng2-namespaced-file-upload';
+import { FileSelectDirective, FileDropDirective, FileUploader } from 'ng2-file-uploading-with-chunk/ng2-file-uploading-with-chunk';
 ```
 
 ### Annotations
