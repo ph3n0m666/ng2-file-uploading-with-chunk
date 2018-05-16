@@ -1,4 +1,4 @@
-import { FileLikeObject } from "../ng2-file-upload";
+import { FileLikeObject } from "../ng2-namespaced-file-upload";
 
 export class FileType {
   /*  MS office  */

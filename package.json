@@ -1,6 +1,6 @@
 {
   "name": "ng2-namespaced-file-upload",
-  "version": "1.0",
+  "version": "0.0.1",
   "description": "Angular file upload directives",
   "scripts": {
     "lite-server": "lite-server -c demo/bs-config.json",
