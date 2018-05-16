@@ -1,6 +1,6 @@
 {
   "project": {
-    "name": "ng2-file-upload"
+    "name": "ng2-file-uploading-with-chunk"
   },
   "apps": [
     {
